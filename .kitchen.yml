@@ -50,17 +50,19 @@ platforms:
     driver_config:
       network:
         - ["forwarded_port", {guest: 80, host: 8087}]
+  - name: oel-6.5
+    driver_config:
+      network:
+        - ["forwarded_port", {guest: 80, host: 8088}]
+      box: box-cutter/oel65
+      box_url: https://vagrantcloud.com/box-cutter/oel65/version/2/provider/virtualbox.box
 
 suites:
  - name: server_package
    run_list:
-   - recipe[nagios::default]
-   - recipe[nrpe::default]
    - role[monitoring]
  - name: server_source
    run_list:
-   - recipe[nagios::default]
-   - recipe[nrpe::default]
    - role[monitoring]
    attributes:
      nagios:
@@ -68,4 +70,3 @@ suites:
          install_method: "source"
 data_bags_path: test/data_bags
 roles_path: test/roles
-
