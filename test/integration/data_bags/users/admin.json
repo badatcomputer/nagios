@@ -1,7 +1,7 @@
     {
       "id": "admin",
       "groups": "sysadmin",
-      "htpasswd": "$apr1$fmMTdsBg$KLGrzHT.K3CNfPP05oRgW/",
+      "htpasswd": "$apr1$kozmxgVr$GNeFJtJewBSphOQm7IvVL/",
       "nagios": {
         "pager": "nagiosadmin_pager@example.com",
         "email": "nagiosadmin@example.com"
