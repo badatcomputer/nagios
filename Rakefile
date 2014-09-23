@@ -36,7 +36,7 @@ end
 
 desc 'Runs foodcritic against the cookbook.'
 task :foodcritic do
-  sh 'bundle exec foodcritic -f any .'
+  sh 'bundle exec foodcritic -f any --tags ~FC003 --tags ~FC015 --tags ~FC023 .'
 end
 
 desc 'Runs foodcritic against the cookbook.'
