@@ -60,13 +60,9 @@ platforms:
 suites:
  - name: server_package
    run_list:
-   - recipe[nagios::default]
-   - recipe[nrpe::default]
    - role[monitoring]
  - name: server_source
    run_list:
-   - recipe[nagios::default]
-   - recipe[nrpe::default]
    - role[monitoring]
    attributes:
      nagios:
